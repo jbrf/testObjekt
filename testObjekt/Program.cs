@@ -3,16 +3,22 @@
 
 class Program
 {
-    public string TillRovarSprak(string text)
+    public static string TillRovarSprak(string text)
     {
         char[] chars = text.ToCharArray();
         string result = "";
+        string consonants = "bcdfghjklmnpqrstvxz";
+        consonants += consonants.ToUpper();
 
         foreach (char achar in chars)
         {
-            if ("bcdfghjklmnpqrstvxz".IndexOf(achar) >= 0)
+           
+            if (consonants.IndexOf(achar) >= 0)
             {
                 // Är konsonant
+                Console.WriteLine(achar);
+                result += achar + "o" + achar;
+
             }
             else
             {
@@ -27,7 +33,8 @@ class Program
   
     static void Main()
     {
-        string text = "Hej";
+
+        Console.WriteLine(TillRovarSprak("Hej"));
         
 
        
