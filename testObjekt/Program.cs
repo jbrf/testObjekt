@@ -32,7 +32,23 @@ class Program
 
     public static string FranRovarSprakTillSvenska(string text)
     {
+        char[] chars = text.ToCharArray();
+        string result = "";
+        string consonants = "bcdfghjklmnpqrstvxz";
+        consonants = consonants + consonants.ToUpper();
 
+        foreach (char ichar in chars)
+        {
+            if (consonants.IndexOf(ichar) >= 0)
+            {
+                Console.WriteLine(ichar);
+            }
+            else 
+            {
+                result = result + ichar;
+            }
+
+        }
 
 
         return result;
@@ -42,7 +58,7 @@ class Program
     static void Main()
     {
 
-        Console.WriteLine(TillRovarSprak("Hej, jag heter Johan"));
+       // Console.WriteLine(TillRovarSprak("Hej, jag heter Johan"));
         Console.WriteLine(FranRovarSprakTillSvenska("Hohejoj, jojagog hohetoteror Jojohohanon"));
 
        
