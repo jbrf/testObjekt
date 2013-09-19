@@ -16,8 +16,8 @@ class Program
             if (consonants.IndexOf(achar) >= 0)
             {
                 // Är konsonant
-                Console.WriteLine(achar);
-                result += achar + "o" + achar;
+
+                result += achar + "o" + achar; /*(char.ToLower(achar));*/
 
             }
             else
@@ -29,13 +29,21 @@ class Program
         }
         return result;
     }
+
+    public static string FranRovarSprakTillSvenska(string text)
+    {
+
+
+
+        return result;
+    }
     
   
     static void Main()
     {
 
-        Console.WriteLine(TillRovarSprak("Hej"));
-        
+        Console.WriteLine(TillRovarSprak("Hej, jag heter Johan"));
+        Console.WriteLine(FranRovarSprakTillSvenska("Hohejoj, jojagog hohetoteror Jojohohanon"));
 
        
        
